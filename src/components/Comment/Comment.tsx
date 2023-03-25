@@ -1,9 +1,8 @@
 import * as S from './Comment.styled'
 import { useEffect, useState } from 'react'
-import { useLocation, useParams } from "react-router-dom";
-import { Post } from '../../components/Post/Post.styled';
+import { useLocation } from "react-router-dom";
 import { useGetCommentsMutation } from '../../shared/features/api/postsSlice';
-import { IComment, IUser } from '../../shared/interface';
+import { IComment } from '../../shared/interface';
 
 
 export const Comment = () => {
@@ -17,7 +16,6 @@ export const Comment = () => {
     .unwrap()
     .then(data => setComments(data))
   },[])
-
 
   return (
     <>
@@ -34,7 +32,6 @@ export const Comment = () => {
           )
         })}
 
-      
     </>
   )
 }

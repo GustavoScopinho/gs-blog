@@ -2,8 +2,10 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import './App.css'
 import { Comments } from './pages/Comments/Comments'
 import { Home } from './pages/Home/Home'
-import { Posts } from './pages/Posts/Posts'
-import { Users } from './pages/Users/Users'
+import { PostList } from './pages/PostList/PostList'
+import { UserDetails } from './pages/UserDetails/UserDetails'
+import { UserList } from './pages/UserList/UserList'
+
 
 
 export const Router = () => {
@@ -12,9 +14,10 @@ export const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/posts' element={<Posts/>} />
+          <Route path='/posts' element={<PostList/>} />
           <Route path='/posts/comments' element={<Comments/>} />
-          <Route path='/users' element={<Users/>} />
+          <Route path='/users' element={<UserList/>} />
+          <Route path='/user-by-id/' element={<UserDetails/>} />
           
         </Routes>
       </BrowserRouter>

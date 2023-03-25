@@ -3,15 +3,15 @@ import { IUser } from "../../interface";
 
 export const usersSlice = apiSlice.injectEndpoints({
   endpoints: build => ({
-      getUsers: build.query<IUser, void>({
+      getUsers: build.query<IUser[], void>({
         query: () => ({
           url: '/users',
           method: 'GET'
         })
       }),
-      getUserById: build.mutation<IUser,number | unknown>({
+      getUserById: build.mutation<IUser | undefined,number | unknown>({
         query: (id) => ({
-          url: `/users/${id}`,
+          url: `/users/${id}/`,
           method: 'GET'
         })
       })

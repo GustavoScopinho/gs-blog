@@ -1,46 +1,45 @@
-
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useGetCommentsMutation } from '../../shared/features/api/postsSlice';
-import { IUser } from '../../shared/interface';
 import * as S from './User.styled'
+import { useNavigate } from 'react-router-dom'
+import { useGetUsersQuery } from '../../shared/features/api/usersSlice'
+import { IUser } from '../../shared/interface'
 
 export const User = () => {
 
-  // const { state } = useLocation();
-
-  // const [getComments] = useGetCommentsMutation()
-  // const [user, setUser]= useState<IUser[] | undefined>()
-
-  // useEffect(() => {
-  //   getComments(state)
-  //   .unwrap()
-  //   .then(data => setComments(data))
-  // },[])
+  const navigate = useNavigate()
+  const { data: Users} = useGetUsersQuery()
 
   return (
     <>
-      <S.Container>
-        <S.ContainerUsers>
-          <S.ContainerUser>
-            <S.P>
-              Nome
-            </S.P>
-            <S.P>
-              Email
-            </S.P>
-            <S.P>
-              Website
-            </S.P>
-            <S.P>
-              Company
-            </S.P>
-            <S.P>
-              catchPhrase
-            </S.P>       
-          </S.ContainerUser>
-        </S.ContainerUsers>
-      </S.Container>
+        { Users?.map((user: IUser) => {
+          return (
+            <S.Container key={user.name}>
+            <S.ContainerUsers >
+                <S.BoxUser >
+                  <S.P>
+                    {user.name}
+                  </S.P>
+                  <S.P>
+                    {user.email}
+                  </S.P>
+                  <S.P>
+                    {user.website}
+                  </S.P>
+                  <S.P>
+                    {user.company.name}
+                  </S.P>
+                  <S.P>
+                    {user.company.catchPhrase}
+                  </S.P>       
+                  <S.Button 
+                    onClick={() => {
+                      navigate('user-by-id', { state: user.id})
+                    }}
+                  >More details</S.Button>
+                </S.BoxUser>
+            </S.ContainerUsers>
+            </S.Container>
+          )
+        })}
     </>
   )
 }

@@ -1,5 +1,5 @@
 import * as S from './Post.styled'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useGetPostsQuery } from '../../shared/features/api/postsSlice'
 import { IPost } from '../../shared/interface'
 

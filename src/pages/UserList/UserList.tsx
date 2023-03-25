@@ -1,12 +1,14 @@
 import { Header } from '../../components/Header/Header'
 import { User } from '../../components/User/User'
-import * as S from './Users.styled'
+import * as S from './UserList.styled'
 
-export const Users = () => {
+export const UserList = () => {
   return (
     <>
       <Header/>
-      <User/>
+      <S.Container>
+        <User/>
+      </S.Container>
     </>
   )
 }

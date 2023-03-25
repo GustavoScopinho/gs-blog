@@ -1,8 +1,8 @@
 import { Header } from '../../components/Header/Header'
 import { Post } from '../../components/Post/Post'
-import * as S from './Posts.styled'
+import * as S from './PostList.styled'
 
-export const Posts = () => {
+export const PostList = () => {
  
   return (
     <>
