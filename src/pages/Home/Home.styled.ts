@@ -9,7 +9,6 @@ export const Container = styled.header`
   justify-content: center;
   align-items: center;
 `
-
 export const Section = styled.section`
   width: 80%;
 
@@ -21,7 +20,6 @@ export const Section = styled.section`
     flex-direction: column;
     
   }
-  
 `
 export const H1 = styled.h1`
 color: #fff;
@@ -35,16 +33,13 @@ font-size: 55px;
   font-size: 32px;
   }
 `
-
 export const ContainerTitle = styled.div`
   width: 40%;
  
-
   @media (max-width: 1100px) {
     width: 90%;
   }
 `
-
 export const ContainerLottie = styled.div`
   width: 800px;
   @media (max-width: 800px) {
@@ -54,5 +49,4 @@ export const ContainerLottie = styled.div`
     margin-top: 40px;
     width: 480px;
   }
-
 `

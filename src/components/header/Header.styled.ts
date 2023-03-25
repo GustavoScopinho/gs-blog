@@ -20,13 +20,11 @@ export const ContainerLogo = styled.h1`
 
   color: #fff;
 `
-
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 30px;
 `
-
 export const A = styled.a`
   color: #fff;
 `

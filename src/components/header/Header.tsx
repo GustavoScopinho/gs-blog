@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import * as S from "./Header.styled"
 
 export const Header = () => {
@@ -6,14 +7,20 @@ export const Header = () => {
       <S.Container>
           <S.ContainerHeader>
             <S.ContainerLogo>
-              GS Blog
+              <Link to={{pathname: "/"}} >
+                 GS Blog
+              </Link>
             </S.ContainerLogo>
             <S.Nav>
-              <S.A>
-                Posts
+              <S.A >
+                <Link to={{pathname: "/posts"}} >
+                   Posts
+                </Link>
               </S.A>
               <S.A>
-                Users
+                <Link to={{pathname: "/users"}} >
+                  Users
+                </Link>
               </S.A>
             </S.Nav>
           </S.ContainerHeader>
