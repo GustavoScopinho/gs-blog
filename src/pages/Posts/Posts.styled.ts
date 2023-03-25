@@ -18,18 +18,3 @@ export const H1 = styled.h1`
   padding: 50px 0;
   color: #fff;
 `
-
-
-export const ContainerPost = styled.div`
-  background-color: #fff2;
-  width: 600px;
-  height: 180px;
-  border-radius: 10px;
-  padding: 10px;
-
-`
-
-export const Post = styled.div`
-  color: #fff;
-  margin-bottom: 8px;
-`

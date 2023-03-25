@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import * as S from "./Header.styled"
+import * as S from './Header.styled'
 
 export const Header = () => {
   return (
