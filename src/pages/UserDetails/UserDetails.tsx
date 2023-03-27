@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useGetUserByIdMutation } from '../../shared/features/api/usersSlice';
 import { IUser } from '../../shared/interface';
 import { Header } from '../../components/Header/Header';
+import UserIcon from '../../assets/icon-user.png'
 
 export const UserDetails = () => {
   const { state } = useLocation();
@@ -21,26 +22,34 @@ export const UserDetails = () => {
     <>
       <Header/>
         <S.Container>
-            <S.ContainerUser key={user?.id}>
+          <S.ContainerUser key={user?.id}>
+            <S.ContainerIcon>
+              <img src={UserIcon} alt="" />
+            </S.ContainerIcon>
+            
             <S.BoxName>
-            <S.P>{user?.id}</S.P>
-            <S.P>{user?.name}</S.P>
-            <S.P>{user?.username}</S.P>
+              <S.H3>{user?.name}.</S.H3>
+              <S.H3>({user?.username})</S.H3>
             </S.BoxName>
+            <S.ContainerTitle>
+              <S.H4>
+                Adress:
+              </S.H4>
+            </S.ContainerTitle>
             <S.Adress>
-              <S.P>{user?.address.street}</S.P>
-              <S.P>{user?.address.suite}</S.P>
-              <S.P>{user?.address.city}</S.P>
-              <S.P>{user?.address.zipcode}</S.P>
+              <S.P>Street: {user?.address.street}</S.P>
+              <S.P>{user?.address.suite},</S.P>
+              <S.P>City: {user?.address.city},</S.P>
+              <S.P>Zipcode: {user?.address.zipcode}</S.P>
             </S.Adress>
             <S.BoxInfo>
-              <S.P>{user?.phone}</S.P>
-              <S.P>{user?.website}</S.P>
+              <S.P>Phone: {user?.phone}</S.P>
+              <S.P>Website: {user?.website}</S.P>
             </S.BoxInfo>
             <S.BoxCompany>
-              <S.P>{user?.company.name}</S.P>
-              <S.P>{user?.company.catchPhrase}</S.P>
-              <S.P>{user?.company.bs}</S.P>
+              <S.P>Company: {user?.company.name}</S.P>
+              <S.P>Catch Phrase: {user?.company.catchPhrase}</S.P>
+              <S.P> {user?.company.bs}</S.P>
             </S.BoxCompany>
           </S.ContainerUser>
         </S.Container>

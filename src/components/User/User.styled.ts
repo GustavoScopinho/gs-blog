@@ -18,6 +18,8 @@ export const Button = styled.button`
 
   :hover{
     scale: 1.01;
+    background-color: #1F4A76;
+    color: #fff;
   }
 `
 export const Table = styled.table`

@@ -21,9 +21,3 @@ export const H1 = styled.h1`
   color: #fff;
 `
 
-// export const ContainerPost = styled.div`
-  
-//   background-color: #ccc;
-//   width: 80%;
-  
-// `
