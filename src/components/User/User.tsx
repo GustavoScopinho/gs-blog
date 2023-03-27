@@ -10,36 +10,51 @@ export const User = () => {
 
   return (
     <>
-        { Users?.map((user: IUser) => {
-          return (
-            <S.Container key={user.name}>
-            <S.ContainerUsers >
-                <S.BoxUser >
-                  <S.P>
-                    {user.name}
-                  </S.P>
-                  <S.P>
-                    {user.email}
-                  </S.P>
-                  <S.P>
-                    {user.website}
-                  </S.P>
-                  <S.P>
-                    {user.company.name}
-                  </S.P>
-                  <S.P>
-                    {user.company.catchPhrase}
-                  </S.P>       
-                  <S.Button 
-                    onClick={() => {
-                      navigate('user-by-id', { state: user.id})
-                    }}
-                  >More details</S.Button>
-                </S.BoxUser>
-            </S.ContainerUsers>
+        
+            <S.Container >
+                <S.Table>
+                    <S.Thead>
+                      <S.Th>
+                        NAME
+                      </S.Th>
+                      <S.Th>
+                        EMAIL
+                      </S.Th>
+                      <S.Th>
+                        WEBSITE
+                      </S.Th>
+                      <S.Th>
+                        COMPANY
+                      </S.Th>
+                    </S.Thead>
+                    { Users?.map((user: IUser) => {
+                        return (
+                  <S.Tbody key={user.name}>
+                    <S.Td>
+                      {user.name}
+                    </S.Td>
+                    <S.Td>
+                      {user.email}
+                    </S.Td>
+                    <S.Td>
+                      {user.website}
+                    </S.Td>
+                    <S.Td>
+                      {user.name}
+                    </S.Td>
+                    <S.Td>
+                    <S.Button 
+                        onClick={() => {
+                          navigate('/users/details/', { state: user.id})
+                        }}
+                      >More details</S.Button>
+                    </S.Td>
+                  </S.Tbody>
+                  )
+                })}
+                </S.Table>
             </S.Container>
-          )
-        })}
+          
     </>
   )
 }

@@ -17,7 +17,7 @@ export const Router = () => {
           <Route path='/posts' element={<PostList/>} />
           <Route path='/posts/comments' element={<Comments/>} />
           <Route path='/users' element={<UserList/>} />
-          <Route path='/user-by-id/' element={<UserDetails/>} />
+          <Route path='/users/details/' element={<UserDetails/>} />
           
         </Routes>
       </BrowserRouter>

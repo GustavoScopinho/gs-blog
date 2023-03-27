@@ -2,17 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   width: 100%;
-  background-color: #2B63D9;
+  background-color: #1F4A76;
   height: 100px;
+  border-bottom: 1px solid #B1CCFB;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #B1CCFB;
 
   a{
     text-decoration-line: none;
     color: #fff;
+    
+   :hover{
+    color: #4DBBE5;
+   }   
+
   }
 `
 export const ContainerHeader = styled.div`
@@ -28,8 +33,6 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 30px;
-
-  
 `
 export const A = styled.a`
   color: #fff;
