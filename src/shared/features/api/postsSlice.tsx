@@ -3,7 +3,7 @@ import { IComment, IPost } from "../../interface";
 
 export const postsSlice = apiSlice.injectEndpoints({
   endpoints: build => ({
-      getPosts: build.query<IPost[], void>({
+      getPosts: build.mutation<IPost[], void>({
         query: () => ({
           url: '/posts',
           method: 'GET'
@@ -20,4 +20,4 @@ export const postsSlice = apiSlice.injectEndpoints({
   overrideExisting: false
 })
 
-export const {useGetPostsQuery, useGetCommentsMutation} = postsSlice
+export const {useGetPostsMutation, useGetCommentsMutation} = postsSlice
