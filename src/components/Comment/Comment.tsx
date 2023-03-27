@@ -23,10 +23,15 @@ export const Comment = () => {
       { comments?.map((comment: IComment) => {
           return (
             <S.ContainerComment key={comment.id}>
-              <S.P>{comment.postId}</S.P>
-              <S.P>{comment.id}</S.P>
-              <S.P>{comment.name}</S.P>
-              <S.P>{comment.email}</S.P>
+             
+                <S.ContainerInfo>
+                   <S.P>ID: {comment.id}</S.P>
+                   <S.H5>{comment.email}</S.H5>
+                   </S.ContainerInfo>
+                   <S.ContainerUser>
+                <S.H3>{comment.name}</S.H3>
+               
+             </S.ContainerUser>
               <S.P>{comment.body}</S.P>
             </S.ContainerComment>    
           )

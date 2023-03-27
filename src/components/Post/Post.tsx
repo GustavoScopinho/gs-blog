@@ -30,23 +30,25 @@ export const Post = () => {
     <>
          <S.ContainerPagination>
           {Array.from(Array(pages), (posts, index) => {
-            return <S.ButtonPagination value={index} onClick={(e: any) => setCurrentPage(Number(e.target.value))}>{index + 1}</S.ButtonPagination>
+            return <S.ButtonPagination key={index} value={index} onClick={(e: any) => setCurrentPage(Number(e.target.value))}>{index + 1}</S.ButtonPagination>
                 })}
          </S.ContainerPagination>
           {currentItens?.map((post: IPost) => {
           return(
             <S.ContainerPost key={post.id}>
-            <S.Post>
+            <S.H4>
             {post.title}
-            </S.Post>
-            <S.Post>
+            </S.H4>
+            <S.P>
             {post.body}
-            </S.Post>
-            <S.Button 
-              onClick={() => {
-                navigate('/posts/comments', { state: post.userId})
-              }}
-            >View more</S.Button>
+            </S.P>
+            <S.ContainerButton>
+              <S.Button 
+                onClick={() => {
+                  navigate('/posts/comments', { state: post.userId})
+                }}
+              >See comments...</S.Button>
+            </S.ContainerButton>
           </S.ContainerPost>
           )
           })}    

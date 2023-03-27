@@ -9,6 +9,7 @@ export const Container = styled.div`
 `
 
 export const Section = styled.section`
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,3 +20,10 @@ export const H1 = styled.h1`
   padding: 50px 0;
   color: #fff;
 `
+
+// export const ContainerPost = styled.div`
+  
+//   background-color: #ccc;
+//   width: 80%;
+  
+// `

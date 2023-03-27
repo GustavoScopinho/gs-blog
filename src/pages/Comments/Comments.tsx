@@ -8,6 +8,9 @@ export const Comments = () => {
     <>
       <Header/>
       <S.Container>
+        <S.H1>
+          Comments
+        </S.H1>
         <Comment/>
       </S.Container>
     </>
