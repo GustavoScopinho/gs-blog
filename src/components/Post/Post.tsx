@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import { useGetPostsMutation } from '../../shared/features/api/postsSlice'
 import { IPost} from '../../shared/interface'
 import { useEffect, useState } from 'react'
+import { SkeletonPost } from '../SkeletonPost/SkeletonPost'
 
 
 export const Post = () => {
 
   const navigate = useNavigate()
   
+  const [isLoading, setIsLoading] = useState(false)
   const [getPosts] = useGetPostsMutation()
   const [posts, setPosts]= useState<IPost[]>([])
   const [postPerPage, setPostPerPage] = useState(8)
@@ -20,10 +22,11 @@ export const Post = () => {
   const currentItens = posts?.slice(startIndex, endIndex)
 
   useEffect(() => {
+    setIsLoading(true)
     getPosts()
     .unwrap()
     .then(data => setPosts(data))
-
+    .finally(() => setIsLoading(false))
   },[])
 
   return (
@@ -33,7 +36,7 @@ export const Post = () => {
             return <S.ButtonPagination key={index} value={index} onClick={(e: any) => setCurrentPage(Number(e.target.value))}>{index + 1}</S.ButtonPagination>
                 })}
          </S.ContainerPagination>
-          {currentItens?.map((post: IPost) => {
+          {isLoading ? (<SkeletonPost/>) : (currentItens?.map((post: IPost) => {
           return(
             <S.ContainerPost key={post.id}>
             <S.H4>
@@ -51,7 +54,7 @@ export const Post = () => {
             </S.ContainerButton>
           </S.ContainerPost>
           )
-          })}    
+          })) }    
     </>
   )
 }
