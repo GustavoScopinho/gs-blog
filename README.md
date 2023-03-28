@@ -15,7 +15,8 @@ Tecnologias utilizadas:<br>
 
 ### O projeto possui algumas dependências, aqui embaixo vai o comando para você instalar todos:
 
-1 - npm install -force <br>
+1 - npm install <br>
+Caso de erro utilizar: npm install -force
 
 
 ### Para iniciar o projeto:
