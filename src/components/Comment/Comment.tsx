@@ -19,7 +19,7 @@ export const Comment = () => {
 
   return (
     <>
-  
+    
       { comments?.map((comment: IComment) => {
           return (
             <S.ContainerComment key={comment.id}>

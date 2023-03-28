@@ -23,6 +23,7 @@ export const H4 = styled.h4`
   margin-bottom: 8px;
   font-size: 16px;
 `
+
 export const P = styled.p`
   color: #777777;
   margin-bottom: 8px;

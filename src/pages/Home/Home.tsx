@@ -1,3 +1,4 @@
+import { Footer } from "../../components/Footer/Footer"
 import { Header } from "../../components/Header/Header"
 import { LottieBlog } from "../../components/LottieBlog"
 import * as S from "./Home.styled"
@@ -18,6 +19,7 @@ export const Home = () => {
           </S.ContainerLottie>
         </S.Section>
       </S.Container>
+      <Footer/>
     </>
   )
 }

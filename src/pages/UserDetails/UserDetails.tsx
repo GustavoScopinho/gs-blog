@@ -5,6 +5,7 @@ import { useGetUserByIdMutation } from '../../shared/features/api/usersSlice';
 import { IUser } from '../../shared/interface';
 import { Header } from '../../components/Header/Header';
 import UserIcon from '../../assets/icon-user.png'
+import { Footer } from '../../components/Footer/Footer';
 
 export const UserDetails = () => {
   const { state } = useLocation();
@@ -54,6 +55,7 @@ export const UserDetails = () => {
           </S.ContainerInfo>
           </S.ContainerUser>
         </S.Container>
+        <Footer/>
     </>
   )
 }

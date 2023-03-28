@@ -14,10 +14,9 @@ export const Container = styled.header`
     text-decoration-line: none;
     color: #fff;
     
-   :hover{
-    color: #4DBBE5;
-   }   
-
+    :hover{
+      color: #4DBBE5;
+    }   
   }
 `
 export const ContainerHeader = styled.div`
@@ -26,9 +25,8 @@ export const ContainerHeader = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export const ContainerLogo = styled.h1`
-  
-`
+export const ContainerLogo = styled.h1``
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;

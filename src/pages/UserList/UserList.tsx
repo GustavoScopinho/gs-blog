@@ -1,3 +1,4 @@
+import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import { User } from '../../components/User/User'
 import * as S from './UserList.styled'
@@ -9,6 +10,7 @@ export const UserList = () => {
       <S.Container>
         <User/>
       </S.Container>
+      <Footer/>
     </>
   )
 }

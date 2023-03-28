@@ -21,7 +21,6 @@ export const ContainerIcon = styled.div`
   img{
     width: 100px;
 
-
     @media (max-width: 600px) {
     width: 80px;
   }
@@ -54,8 +53,7 @@ export const BoxName = styled.div`
   align-items: center;
   gap: 10px;
 `
-export const ContainerTitle = styled.div`
-`
+export const ContainerTitle = styled.div``
 
 export const H3 = styled.h3`
   color: #546E7A;
@@ -66,6 +64,7 @@ export const H4 = styled.h4`
   text-align: center;
   margin-bottom: 10px;
 `
+
 export const P = styled.p`
   margin-bottom: 30px;
   font-size: 14px;

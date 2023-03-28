@@ -16,6 +16,6 @@ export const Container = styled.div`
 `
 
 export const H1 = styled.h1`
-padding: 50px 0;
+  padding: 50px 0;
   color: #fff;
 `
