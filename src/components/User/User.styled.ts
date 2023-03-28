@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 90%;
+  overflow-x: auto;
 
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    display: block;
+    margin: 20px;
+  }
 `
 export const P = styled.p`
-color: #fff;
+  color: #fff;
   margin-bottom: 8px;
 `
 export const Button = styled.button`
@@ -21,15 +30,25 @@ export const Button = styled.button`
     background-color: #1F4A76;
     color: #fff;
   }
+
+  @media (max-width: 650px) {
+    padding: 2px;
+  }
 `
 export const Table = styled.table`
-  width: 100%;
+  width: 80;
   border-radius: 10px;
   padding: 40px 60px;
   background-color: #edf2fc;
+
+  @media (max-width: 800px) {
+    width: 90%;
+    padding: 10px 15px;
+  }
+
 `
 export const Thead = styled.thead`
-  width: 100%;
+
 `
 export const Th = styled.th`
 `
@@ -39,4 +58,8 @@ export const Td = styled.td`
   border-bottom: 1px solid #1F4A76;
   padding: 12px 0;
   text-align: center;
+
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
 `

@@ -9,6 +9,10 @@ export const ContainerPost = styled.div`
   margin-bottom: 16px;
   box-shadow: 9px 13px 21px -7px rgba(0,0,0,0.75);
 
+  @media (max-width: 650px) {
+    width: 300px;
+  }
+
   h4,p{
     :first-letter { text-transform: capitalize; }
   }
@@ -40,7 +44,6 @@ export const Button = styled.button`
     scale: 1.01;
     background-color: #1F4B77;
     color: #fff;
-    
   }
 `
 export const ContainerPagination = styled.div`
@@ -48,6 +51,10 @@ export const ContainerPagination = styled.div`
   display: flex;
   justify-content: center;
   gap: 5px;
+
+  @media (max-width: 650px) {
+    width: 85%;
+  }
 `
 export const ButtonPagination = styled.button`
   background-color: #fff2;
@@ -62,6 +69,5 @@ export const ButtonPagination = styled.button`
 
   :hover{
     scale: 1.03;
-    
   }
 `

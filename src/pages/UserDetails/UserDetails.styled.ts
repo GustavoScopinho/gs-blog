@@ -15,11 +15,16 @@ export const Container = styled.div`
 export const ContainerIcon = styled.div`
   margin-bottom: 30px;
 
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 
- img{
-  width: 100px;
+  img{
+    width: 100px;
+
+
+    @media (max-width: 600px) {
+    width: 80px;
+  }
  }
   `
 
@@ -29,6 +34,16 @@ export const ContainerUser = styled.div`
   padding: 30px 20px;
   border-radius: 8px;
   box-shadow: 9px 13px 21px -7px rgba(0,0,0,0.75);
+
+  @media (max-width: 600px) {
+    width: 350px;
+    padding: 10px 5px;
+  }
+  `
+export const ContainerInfo = styled.div`
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 5px;
   `
 
 export const BoxName = styled.div`

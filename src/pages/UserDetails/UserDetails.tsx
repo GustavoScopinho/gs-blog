@@ -26,7 +26,6 @@ export const UserDetails = () => {
             <S.ContainerIcon>
               <img src={UserIcon} alt="" />
             </S.ContainerIcon>
-            
             <S.BoxName>
               <S.H3>{user?.name}.</S.H3>
               <S.H3>({user?.username})</S.H3>
@@ -36,6 +35,7 @@ export const UserDetails = () => {
                 Adress:
               </S.H4>
             </S.ContainerTitle>
+          <S.ContainerInfo>
             <S.Adress>
               <S.P>Street: {user?.address.street}</S.P>
               <S.P>{user?.address.suite},</S.P>
@@ -51,6 +51,7 @@ export const UserDetails = () => {
               <S.P>Catch Phrase: {user?.company.catchPhrase}</S.P>
               <S.P> {user?.company.bs}</S.P>
             </S.BoxCompany>
+          </S.ContainerInfo>
           </S.ContainerUser>
         </S.Container>
     </>
