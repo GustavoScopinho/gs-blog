@@ -5,7 +5,7 @@ Tecnologias utilizadas:<br>
 • React.js<br>
 • Typescript<br>
 • HTML5, CSS3 e Style-Components<br>
-• Redux Toolkit <br>
+• Redux Toolkit Query <br>
 • React Router Dom <br>
 • React Lottie <br>
 
