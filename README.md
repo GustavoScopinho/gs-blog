@@ -1,4 +1,4 @@
-# gs-blog![gs-blog](https://user-images.githubusercontent.com/102439841/228108036-9995a155-9577-43bb-b668-c8ce73241287.gif)
+# GS-Blog![gs-blog](https://user-images.githubusercontent.com/102439841/228108036-9995a155-9577-43bb-b668-c8ce73241287.gif)
 
 Tecnologias utilizadas:<br>
 
