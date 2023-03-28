@@ -2,16 +2,17 @@ import * as S from './User.styled'
 import { useNavigate } from 'react-router-dom'
 import { useGetUsersQuery } from '../../shared/features/api/usersSlice'
 import { IUser } from '../../shared/interface'
+import { LottieLoading } from '../LottieLoading'
 
 export const User = () => {
 
   const navigate = useNavigate()
-  const { data: Users} = useGetUsersQuery()
+  const { data: Users, isLoading} = useGetUsersQuery()
 
   return (
     <>
         
-            <S.Container >
+           {isLoading ? (<LottieLoading/>) : ( <S.Container >
                 <S.Table>
                     <S.Thead>
                       <S.Th>
@@ -53,7 +54,7 @@ export const User = () => {
                   )
                 })}
                 </S.Table>
-            </S.Container>
+            </S.Container>)}
           
     </>
   )

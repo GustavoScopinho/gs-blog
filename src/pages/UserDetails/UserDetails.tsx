@@ -6,23 +6,30 @@ import { IUser } from '../../shared/interface';
 import { Header } from '../../components/Header/Header';
 import UserIcon from '../../assets/icon-user.png'
 import { Footer } from '../../components/Footer/Footer';
+import { SkeletonPost } from '../../components/SkeletonPost/SkeletonPost';
+import { LottieLoading } from '../../components/LottieLoading';
 
 export const UserDetails = () => {
   const { state } = useLocation();
 
+
+  const [isLoading, setIsLoading] = useState(false)
   const [getUser] = useGetUserByIdMutation()
   const [user, setUser]= useState<IUser | undefined>()
 
   useEffect(() => {
+    setIsLoading(true)
     getUser(state)
     .unwrap()
     .then(data => setUser(data))
+    .finally(() => setIsLoading(false))
   },[])
 
   return (
     <>
       <Header/>
-        <S.Container>
+      <S.Container>
+        {isLoading ? (<LottieLoading/>) : (
           <S.ContainerUser key={user?.id}>
             <S.ContainerIcon>
               <img src={UserIcon} alt="" />
@@ -54,6 +61,7 @@ export const UserDetails = () => {
             </S.BoxCompany>
           </S.ContainerInfo>
           </S.ContainerUser>
+        )}
         </S.Container>
         <Footer/>
     </>
