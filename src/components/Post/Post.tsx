@@ -33,7 +33,7 @@ export const Post = () => {
     <>
          <S.ContainerPagination>
           {Array.from(Array(pages), (posts, index) => {
-            return <S.ButtonPagination key={index} value={index} onClick={(e: any) => setCurrentPage(Number(e.target.value))}>{index + 1}</S.ButtonPagination>
+            return <S.ButtonPagination  key={index} value={index} onClick={(e: any) => setCurrentPage(Number(e.target.value))}>{index + 1}</S.ButtonPagination>
                 })}
          </S.ContainerPagination>
           {isLoading ? (<SkeletonPost/>) : (currentItens?.map((post: IPost) => {

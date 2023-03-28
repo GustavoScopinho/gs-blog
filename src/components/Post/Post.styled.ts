@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
+
+
 export const ContainerPost = styled.div`
+
   background-color: #fff;
   width: 600px;
   height: 100%;
@@ -8,6 +11,8 @@ export const ContainerPost = styled.div`
   padding: 12px;
   margin-bottom: 16px;
   box-shadow: 9px 13px 21px -7px rgba(0,0,0,0.75);
+
+  
 
   @media (max-width: 650px) {
     width: 300px;
@@ -67,6 +72,10 @@ export const ButtonPagination = styled.button`
   font-weight: 500;
   border-radius: 2px;
   cursor: pointer;
+
+  :focus {
+  background-color: rgba(38, 38, 38, 0.3);
+}
 
   :hover{
     scale: 1.03;
